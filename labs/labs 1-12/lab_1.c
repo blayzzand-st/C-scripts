@@ -16,7 +16,7 @@ int main() {
     printf("Please enter the command: \n");
     gets(command);
 
-    if (strcmp(command, "prime numbers") == 0) {
+    if (strcmp(command, "PRIME") == 0) {
         // Prime numbers
         int n;
         scanf("%i", &n);
