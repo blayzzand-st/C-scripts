@@ -1,5 +1,5 @@
 name: Prime numbers and Bank account Project
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+run-name: Prime numbers and Bank account Project is building
 on: [push]
 jobs:
   Explore-GitHub-Actions:
