@@ -13,9 +13,4 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
-      - name: Modern CMake Buildsystem
-        uses: JohelEGP/modern-cmake-buildsystem@v1.0.0
-        with:
-          path-to-source: ${{ github.workspace }}/labs
-          path-to-build: ${{ github.workspace }}/labs/cmake-build-debug
       - run: echo "🍏 This job's status is ${{ job.status }}."
