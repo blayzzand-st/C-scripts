@@ -13,8 +13,9 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
-      - name: cmake-clang-ninja-build
-        uses: UnsafePointer/cmake-clang-ninja-build-github-action@v1.4
+      - name: Modern CMake Buildsystem
+        uses: JohelEGP/modern-cmake-buildsystem@v1.0.0
         with:
-          dir: ${{ github.workspace }}/labs/CMakeLists.txt
+          path-to-source: ${{ github.workspace }}/labs
+          path-to-build: ${{ github.workspace }}/labs/cmake-build-debug
       - run: echo "🍏 This job's status is ${{ job.status }}."
