@@ -13,10 +13,6 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
-      - name: Build CMake
-        uses: ashutoshvarma/action-cmake-build@v1
-        with:
-          build-dir: ${{ runner.workspace }}/build
-          build-type: Release
-          install-build: true
+      - name: cmake-configure
+        uses: snickerbockers/cmake-configure@prerel1
       - run: echo "🍏 This job's status is ${{ job.status }}."
