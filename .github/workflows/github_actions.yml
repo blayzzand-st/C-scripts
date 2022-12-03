@@ -13,6 +13,8 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
-      - name: Build CMake
-        uses: ashutoshvarma/action-cmake-build@v1
+      - name: cmake-clang-ninja-build
+        uses: UnsafePointer/cmake-clang-ninja-build-github-action@v1.4
+        with:
+          dir: ${{ github.workspace }}/labs/CMakeLists.txt
       - run: echo "🍏 This job's status is ${{ job.status }}."
