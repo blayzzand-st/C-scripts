@@ -13,8 +13,6 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
-      - name: run-cmake
-        uses: lukka/run-cmake@v10.1
-        with:
-          cmakeListsTxtPath: ${{ github.workspace }}/labs/CMakeLists.txt
+      - name: Build CMake
+        uses: ashutoshvarma/action-cmake-build@v1
       - run: echo "🍏 This job's status is ${{ job.status }}."
